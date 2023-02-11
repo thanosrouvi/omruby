@@ -29,6 +29,7 @@ gem "jbuilder"
 
 gem 'jquery-rails'
 
+
 gem 'omniauth-google-oauth2'
 
 gem 'omniauth-facebook'
