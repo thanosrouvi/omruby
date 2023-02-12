@@ -14,7 +14,4 @@
     <div class="container">
         <%= button_to "Or Login with Facebook", "/auth/facebook", method: :post %>
     </div>
-    <% flash.each do |message_type, message| %>
-        <div class="flash-<%= message_type %>"><%= message %></div>
-        <%= button_to "Login with Facebook", "/auth/facebook", method: :post %>
-    <% end %>
+    

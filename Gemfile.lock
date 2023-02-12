@@ -161,11 +161,6 @@ GEM
       rack-protection
     omniauth-facebook (9.0.0)
       omniauth-oauth2 (~> 1.2)
-    omniauth-google-oauth2 (1.1.1)
-      jwt (>= 2.0)
-      oauth2 (~> 2.0.6)
-      omniauth (~> 2.0)
-      omniauth-oauth2 (~> 1.8.0)
     omniauth-oauth2 (1.8.0)
       oauth2 (>= 1.4, < 3)
       omniauth (~> 2.0)
@@ -281,8 +276,7 @@ DEPENDENCIES
   jbuilder
   jquery-rails
   omniauth-facebook
-  omniauth-google-oauth2
-  omniauth-rails_csrf_protection
+  omniauth-rails_csrf_protection (~> 1.0)
   puma (~> 5.0)
   rails (~> 7.0.4, >= 7.0.4.2)
   selenium-webdriver
