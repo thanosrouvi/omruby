@@ -30,10 +30,10 @@ gem "jbuilder"
 gem 'jquery-rails'
 
 
-gem 'omniauth-google-oauth2'
+# gem 'omniauth-google-oauth2'
 
 gem 'omniauth-facebook'
-gem "omniauth-rails_csrf_protection"
+gem 'omniauth-rails_csrf_protection', '~> 1.0'
 
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
