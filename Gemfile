@@ -29,6 +29,7 @@ gem "jbuilder"
 
 gem 'jquery-rails'
 
+gem 'devise', '~> 4.8', '>= 4.8.1'
 
 # gem 'omniauth-google-oauth2'
 
