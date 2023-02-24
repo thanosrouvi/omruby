@@ -3,3 +3,6 @@
     <%= comment.body %>
   </div>
 </div>
+<div id="reply-form-<%= comment.id %>">
+  <% unless comment.parent_id || !comment.persisted? %>
+</div>

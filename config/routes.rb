@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
   resources :friends
-  resources :comments
-  resources :posts
+   
   devise_for :customers
   resources :users
+
+  resources :posts do
+    resources :comments
+  end
+  
   root 'pages#home'
   get 'about'=>'pages#about'
   get 'login'=>'pages#login'
