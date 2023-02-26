@@ -10,7 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema[7.0].define(version: 2023_02_24_173721) do
    create_table "comments", force: :cascade do |t|
      t.text "body"
@@ -19,16 +18,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_24_173721) do
       t.datetime "created_at", null: false
      t.datetime "updated_at", null: false
    end
-=======
-ActiveRecord::Schema[7.0].define(version: 2023_02_24_002059) do
-  create_table "comments", force: :cascade do |t|
-    t.text "body"
-    t.integer "post_id"
-    t.integer "parent_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
->>>>>>> refs/remotes/origin/main
 
   create_table "customers", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -49,7 +38,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_24_002059) do
     t.datetime "updated_at", null: false
   end
 
-<<<<<<< HEAD
   create_table "messages", force: :cascade do |t|
     t.integer "customer_id", null: false
     t.integer "room_id", null: false
@@ -65,17 +53,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_24_002059) do
     t.text "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-=======
-  create_table "posts", force: :cascade do |t|
-    t.string "title"
-    t.string "content"
-    t.boolean "anonymous"
-    t.boolean "graphic"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "user_name"
-    t.index ["user_name"], name: "index_posts_on_user_name"
->>>>>>> refs/remotes/origin/main
   end
 
   create_table "rooms", force: :cascade do |t|
@@ -93,9 +70,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_24_002059) do
     t.datetime "updated_at", null: false
   end
 
-<<<<<<< HEAD
   add_foreign_key "messages", "customers"
   add_foreign_key "messages", "rooms"
-=======
->>>>>>> refs/remotes/origin/main
 end
