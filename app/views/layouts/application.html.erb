@@ -7,9 +7,27 @@
     <%= stylesheet_link_tag 'application', media: 'all','
     data-turbolingks-track':'reload' %>
     <%= javascript_importmap_tags  %>
+    <style type="text/css">
+      #notice_wrapper{
+          padding:2.5rem 0;
+          text-align:center;
+          margin:0;
+          font-size:1.25rem;
+          font-weight:700;
+          color: #FFFFFF;
+          letter-spacing:1px;
+        
+      }
+    </style>
+    
   </head>
 
   <body>
+  <% if notice%>
+      <p class="notice"id= "notice_wrapper" onload="ready"><%= notice %></p>
+    <% elsif alert %>
+      <p class="alert"id= "notice_wrapper"><%= alert %></p>
+<% end %>   
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
@@ -27,16 +45,19 @@
           <a class="nav-link active" aria-current="page" href="/about">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/login">Login</a>
+          <%= link_to "Sign In", new_customer_session_path, class:"nav-link"%>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/signUp">Siqn up</a>
+          <%= link_to "Sign Up", new_customer_registration_path, class:"nav-link"%>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/chat">Chat</a>
+          <a class="nav-link active" aria-current="page" href="/rooms">Rooms</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">notification</a>
+          <a class="nav-link active" aria-current="page" href="/friends">Friends</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="posts" href="/posts">Rosts</a>
         </li>
       </ul>
       <form class="d-flex" role="search">
@@ -47,7 +68,8 @@
   </div>
 </nav>
   <%= yield %>
-    <footer class="small text-muted">
+  <%= link_to "sign in with facebook", "/login/auth/facebook"%>
+  <footer class="small text-muted">
       <div class="container">
         <hr>
         <center>
@@ -55,5 +77,18 @@
         </center>
       </div>
     </footer>
+    <script type="text/javascript">
+       function ready{
+        $(document).ready(function(){
+          setTimeout(function(){
+            $(id="notice_wrapper").fadeOut("slow",function(){
+              $(this).remove();
+            })
+          }, 4500);
+        });
+       }
+        
+    </script>
+    
   </body>
 </html>

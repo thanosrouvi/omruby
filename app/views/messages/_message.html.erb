@@ -1,0 +1,8 @@
+<div class="cont-<%=message.customer.id%>">
+  <div class="message-box msg-<%= message.customer.id %>">
+    <% unless message.room.is_private %>
+      <h6 class="name"> <%= message.customer.email %> </h6>
+    <% end %>
+    <%= message.body %>
+  </div>
+</div>

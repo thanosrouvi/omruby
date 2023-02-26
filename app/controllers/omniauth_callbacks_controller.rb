@@ -1,11 +1,7 @@
 class OmniauthCallbacksController < ApplicationController
 
 	def facebook
-		puts "OmniAuth callback hash: #{auth}"
-		redirect_to root_path, notice:"Succefully connected with facebook #{auth.info.name}"
+		redirect_to '/login/auth/facebook'	
 	end
 
-	def auth
-		request.env['omniauth.auth']
-	end
 end

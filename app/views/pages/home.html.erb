@@ -2,5 +2,11 @@
 	<div class="container">
 		<center><h1>Welcome to the Portal</h1></center>
 		<center><p>In this application you can create a team for assignments. You have the opportunity to search a person and  communicate with them for multiple reasons</p></center>
+		<% if current_customer %>
+		  <%= button_to "Logout", destroy_customer_session_path, method: :delete %>
+		<% else %>
+		  <%= link_to "Login", new_customer_session_path %>
+		<% end %>
+
 	</div>
 </div>
