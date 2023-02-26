@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div id="<%= dom_id comment %>">
   <p>
     <strong>Body:</strong>
@@ -14,4 +15,13 @@
     <%= comment.parent_id %>
   </p>
 
+=======
+<div class="card">
+  <div class="card-body">
+    <%= comment.body %>
+  </div>
+</div>
+<div id="reply-form-<%= comment.id %>">
+  <% unless comment.parent_id || !comment.persisted? %>
+>>>>>>> refs/remotes/origin/main
 </div>

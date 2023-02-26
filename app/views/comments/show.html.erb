@@ -1,6 +1,10 @@
 <p style="color: green"><%= notice %></p>
+<<<<<<< HEAD
 
 <%= render @comment %>
+=======
+<%= render @post.comments %>
+>>>>>>> refs/remotes/origin/main
 
 <div>
   <%= link_to "Edit this comment", edit_comment_path(@comment) %> |
@@ -8,3 +12,19 @@
 
   <%= button_to "Destroy this comment", @comment, method: :delete %>
 </div>
+<<<<<<< HEAD
+=======
+
+<div class="card my-1"> # place this card blow the post body.
+  <div class="card-body">
+    <p class="font-weight-bold">Comments</p>
+    <%= form_with(model: [@post, @post.comments.build]) do |f| %>
+      <div class="form-group">
+        <%= f.label 'New comment' %>
+        <%= f.text_area :body, class: 'form-control' %>
+      </div>
+      <%= f.submit 'Submit', class: 'btn btn-primary' %>
+    <% end %>
+  </div>
+</div>
+>>>>>>> refs/remotes/origin/main

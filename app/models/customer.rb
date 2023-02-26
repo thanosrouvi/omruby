@@ -3,6 +3,9 @@ class Customer < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+<<<<<<< HEAD
   has_many :messages
 
+=======
+>>>>>>> refs/remotes/origin/main
 end
